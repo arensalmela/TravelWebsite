@@ -23,29 +23,32 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
       rel="stylesheet"
     />
-    <!-- Bootstrap tooltips -->
-    <script
+    <!-- Bootstrap tooltips --
+      <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
-    ></script>
-    <!-- Bootstrap core JavaScript -->
+    ></script> --> 
+
+    <!-- Bootstrap core JavaScript --
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
-    ></script>
+    ></script> -->
+
     <!-- MDB core JavaScript -->
-    <script
+    <!--<script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
-    ></script>
+    ></script><-->
+
     <link rel="stylesheet" href="style.css" />
     <title>Travel With Us</title>
   </head>
   <body>
-    <!--Start Nav Bar with hotel and flight tab -->
     <!--Navbar -->
-    <!--Navbar -->
-    <nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1">
+    <nav
+      class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1 navbar sticky-top"
+    >
       <a class="navbar-brand" href="#">Navbar</a>
       <button
         class="navbar-toggler"
@@ -67,10 +70,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Flights</a>
+            <a class="nav-link" href="#flights">Flights</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Hotels</a>
+            <a class="nav-link" href="#hotels">Hotels</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto nav-flex-icons">
@@ -87,22 +90,111 @@
         </ul>
       </div>
     </nav>
-    <!--/.Navbar -->
-    <!--/.Navbar -->
-
     <!--
     Start landing page with home info
   -->
+    <main>
+      <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome, Traveler.</h1>
+        <p class="lead">
+          You have taken the right step towards to your next big adventure.
+        </p>
+        <p class="lead">
+          Let us help get you there in a few simple steps and then all you have
+          to do after that is pack!
+        </p>
+        <hr class="my-4" />
+        <p>
+          Simply tell us your destination and we will present you flight and
+          hotel options. Make the reservations from our website and VOILA -
+          you're ready.
+        </p>
+        <p>Now, let's get started.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button"> Let's Go</a>
+        </p>
+      </div>
+
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <dv class="col text-center" id="flights">
+                <h1>Flight Search</h1>
+                <img
+                  src="./Assets/flight.png"
+                  alt="flight icon"
+                  width="100"
+                  height="100"
+                />
+                <form>
+                  <input
+                    id="flightLocation"
+                    type="text"
+                    placeholder="Search for a location"
+                    aria-label="Search"
+                  />
+                  <button id ="flightbtn" type="button">Search Flights</button>
+                </form>
+              </div>
+            </div>
+            <div class="col">
+              <div class="container">
+                <div class="row">
+                  <div class="col text-center" id="hotels">
+                    <h1>Hotel Search</h1>
+                    <img
+                      src="./Assets/hotel.png"
+                      alt="hotel icon"
+                      width="100"
+                      height="100"
+                    />
+                    <form>
+                      <input
+                        id="hotelSearch"
+                        type="text"
+                        placeholder="Search for a location"
+                        aria-label="Search"
+                      />
+                      <button id ="hotelbtn" type="button">Search Hotels</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="container">
+                <div class="row">
+                  <div class="col text-center" id="contact">
+                    <h1>Contact Us</h1>
+                    <img
+                      src="./Assets/contact1.png"
+                      alt="flight icon"
+                      width="100"
+                      height="100"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
 
     <!--
     Start flights page
   
     <div class = "container">
       <div class = "flights">
-      </div>
+      </div>      
       
--->
-    <!--
+    -->
+
+
+      <!--
     Start Hotels page
   -->
 
@@ -110,15 +202,54 @@
     Start Contact Us page
   -->
 
-    <!--- Linking navbar to sections 
-    <a id="top">
-  <title>This is what we are linking</title>
-</a>
-
-<a href="#top">This is what we click to go to link</a>
---->
+<!--Footer-->
+<footer class="page-footer font-small orange darken-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-1">
+        <div class="mb-5 flex-center">
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic">
+            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- End Footer -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+   <script src ="script.js"></script>
   </body>
+
+
+</html>
+</html>
+</html>
 </html>
