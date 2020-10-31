@@ -12,3 +12,8 @@ body {
   height: 500px;
   background-repeat: no-repeat;
 }
+
+.card-deck {
+  margin-top: 18px;
+  flex-flow: row;
+}
