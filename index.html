@@ -23,32 +23,27 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
       rel="stylesheet"
     />
-    <!-- Bootstrap tooltips --
-      <script
+    <!-- Bootstrap tooltips -->
+    <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
-    ></script> --> 
-
-    <!-- Bootstrap core JavaScript --
+    ></script>
+    <!-- Bootstrap core JavaScript -->
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
-    ></script> -->
-
+    ></script>
     <!-- MDB core JavaScript -->
-    <!--<script
+    <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
-    ></script><-->
-
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Travel With Us</title>
   </head>
   <body>
     <!--Navbar -->
-    <nav
-      class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1 navbar sticky-top"
-    >
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1">
       <a class="navbar-brand" href="#">Navbar</a>
       <button
         class="navbar-toggler"
@@ -90,6 +85,8 @@
         </ul>
       </div>
     </nav>
+    <!--/.Navbar -->
+
     <!--
     Start landing page with home info
   -->
@@ -119,7 +116,7 @@
         <div class="container">
           <div class="row">
             <div class="col">
-              <dv class="col text-center" id="flights">
+              <div class="col text-center" id="flights">
                 <h1>Flight Search</h1>
                 <img
                   src="./Assets/flight.png"
@@ -134,7 +131,9 @@
                     placeholder="Search for a location"
                     aria-label="Search"
                   />
-                  <button id ="flightbtn" type="button">Search Flights</button>
+                  <button class="flightbtn btn blue-gradient" type="button">
+                    Search Flights
+                  </button>
                 </form>
               </div>
             </div>
@@ -149,15 +148,6 @@
                       width="100"
                       height="100"
                     />
-                    <form>
-                      <input
-                        id="hotelSearch"
-                        type="text"
-                        placeholder="Search for a location"
-                        aria-label="Search"
-                      />
-                      <button id ="hotelbtn" type="button">Search Hotels</button>
-                    </form>
                   </div>
                 </div>
               </div>
@@ -182,19 +172,15 @@
       </section>
     </main>
 
-
-
     <!--
     Start flights page
   
     <div class = "container">
       <div class = "flights">
-      </div>      
+      </div>
       
-    -->
-
-
-      <!--
+-->
+    <!--
     Start Hotels page
   -->
 
@@ -202,54 +188,75 @@
     Start Contact Us page
   -->
 
-<!--Footer-->
-<footer class="page-footer font-small orange darken-3">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 mb-1">
-        <div class="mb-5 flex-center">
-          <!-- Facebook -->
-          <a class="fb-ic">
-            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!-- Twitter -->
-          <a class="tw-ic">
-            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!-- Google +-->
-          <a class="gplus-ic">
-            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Linkedin -->
-          <a class="li-ic">
-            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Instagram-->
-          <a class="ins-ic">
-            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Pinterest-->
-          <a class="pin-ic">
-            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
-          </a>
+    <!--- Linking navbar to sections 
+    <a id="top">
+  <title>This is what we are linking</title>
+</a>
+
+<a href="#top">This is what we click to go to link</a>
+--->
+
+    <!-- Footer -->
+    <footer class="page-footer font-small orange darken-3">
+      <!-- Footer Elements -->
+      <div class="container">
+        <!-- Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-12 mb-1">
+            <div class="mb-5 flex-center">
+              <!-- Facebook -->
+              <a class="fb-ic">
+                <i
+                  class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"
+                >
+                </i>
+              </a>
+              <!-- Twitter -->
+              <a class="tw-ic">
+                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x">
+                </i>
+              </a>
+              <!-- Google +-->
+              <a class="gplus-ic">
+                <i
+                  class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"
+                >
+                </i>
+              </a>
+              <!--Linkedin -->
+              <a class="li-ic">
+                <i
+                  class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"
+                >
+                </i>
+              </a>
+              <!--Instagram-->
+              <a class="ins-ic">
+                <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x">
+                </i>
+              </a>
+              <!--Pinterest-->
+              <a class="pin-ic">
+                <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+              </a>
+            </div>
+          </div>
+          <!-- Grid column -->
         </div>
+        <!-- Grid row-->
       </div>
-    </div>
-  </div>
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-<!-- End Footer -->
+      <!-- Footer Elements -->
 
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        © 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <script src ="script.js"></script>
+    <script src="script.js"></script>
   </body>
-
-
-</html>
-</html>
-</html>
 </html>
