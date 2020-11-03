@@ -23,6 +23,7 @@ $(document).ready(function () {
       console.log(hotelGroup);
       for (i = 0; i < hotelGroup.entities.length; i++) {
         var hotel = hotelGroup.entities[i];
+        let hotelName = hotel.name;
         var settings = {
           async: true,
           crossDomain: true,
@@ -40,7 +41,7 @@ $(document).ready(function () {
         $.ajax(settings).done(function (imgresponse) {
           console.log(imgresponse);
 
-          let img = imgresponse.hotelImages[0].baseUrl.replace("{size}", "b");
+          let img = imgresponse.hotelImages[0].baseUrl.replace("{size}", "z");
           var rndmTxt = "This is some random text";
           var contentCard = $("<div>");
           contentCard.html(
@@ -57,7 +58,7 @@ $(document).ready(function () {
           <div class="card-body">
       
             
-            <h4 class="card-title">${hotel.name}</h4>
+            <h4 class="card-title">${hotelName}</h4>
             
             <p class="card-text">${rndmTxt}</p>
            
@@ -70,6 +71,11 @@ $(document).ready(function () {
 
           $("#hotelindex").append(contentCard);
         });
+
+        //HOTEL ROOM IMAGES
+
+        //let sampleImg = imgresponse.hotelimages[i].baseUrl.replace("{size}", "b")
+
         //var hotelCard = $("<div>").addClass("card");
 
         //var hotelCardBody = $("<div>").addClass("card-body");
