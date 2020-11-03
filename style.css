@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url();
+  background-size: stretch;
+  background-color: #cccccc;
+  background-position: center;
+  height: 500px;
+  background-repeat: no-repeat;
+}
+
+.card-deck {
+  margin-top: 18px;
+  flex-flow: row;
+}

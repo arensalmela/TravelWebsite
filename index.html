@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+<!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+<!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+<!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Travel With Us</title>
+  </head>
+  <body>
+<!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1 scrolling-navbar navbar fixed-top">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent-555"
+        aria-controls="navbarSupportedContent-555"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#restaurants">Restaurants</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#hotels">Hotels</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+          <li class="nav-item avatar">
+            <a class="nav-link p-0" href="#">
+              <img
+                src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                class="rounded-circle z-depth-0"
+                alt="avatar image"
+                height="35"
+              />
+            </a>
+          </li> 
+        </ul>
+      </div>
+    </nav>
+<!--/.Navbar -->
+
+<!--Start landing page with home info-->
+    <main>
+      <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome, Eatery Explorer.</h1>
+        <p class="lead">
+          If food is your passion then you've landed in the right place. You have taken the right step towards to your next big adventure.
+        </p>
+        <p class="lead">
+          Let us help get you there in a few simple steps and then all you have
+          to do is grab your appetite and your getaway bag!
+        </p>
+        <hr class="my-4" />
+        <p>
+          Find an area you would like to explore food options in. Make the reservations from our website, book your flight and VOILA -
+          you're ready.
+        </p>
+        <p>Now, let's get started.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button"> Let's Go</a>
+        </p>
+      </div>
+
+      <section>
+<!--Start of Restaurant Container-->
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="col text-center" id="restaurants">
+                <div class="card">
+                  <h1>Find Your Food!</h1>
+                  <img
+                  src="./Assets/restaurant.png"
+                  alt="Restaurant Icon"
+                  width="100"
+                  height="100"
+                  style="margin: auto;"
+                  />
+                  <form>
+                  <input
+                    id="eatLocation"
+                    type="text"
+                    placeholder="Enter Zip Here"
+                    aria-label="Search"
+                  />
+                  <button id="eatBtn" class=" btn blue-gradient" type="button">
+                    Let's Eat!
+                  </button>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+<!-- Start Restaurant Card deck -->
+          <div class="card-deck">
+<!-- Start Restaurant Left Card -->
+            <div class="card mb-4 eatContainer">
+<!--Start Restaurant Left Card image-->
+              <div class="view overlay">
+                <img class="card-img-top"
+                src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+                alt="Card image cap"
+                >
+                <a href="#!">
+                <div class="mask rgba-white-slight waves-effect waves-light">
+                </div>
+                </a>
+              </div>
+<!--Start Restaurant Left Card content-->
+              <div class="card-body">
+<!--Restaurant Left Card Title-->
+                <h4 class="card-title">BEST Choice</h4>
+<!--Restaurant Left Card Text-->
+                <p id="firstCardText" class="card-text">
+                </p>
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+      <a id="secondCardBtn" target="_blank" rel="noopener noreferrer" href=""><button type="button" class="btn btn-light-blue btn-md">Search</button></a>
+              </div>
+            </div>
+<!-- End Restaurant Left Card -->
+<!-- Start Restaurant Middle Card -->
+            <div class="card mb-4">
+<!--Start Restaurant Middle Card image-->
+              <div class="view overlay">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
+                alt="Card image cap">
+                <a href="#!">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+<!--Start Restaurant Middle Card content-->
+              <div class="card-body">
+<!--Start Restaurant Middle Card Title-->
+                <h4 class="card-title">Great Choice</h4>
+<!--Start Restaurant Middle Card Text-->
+                <p id="secondCardText" class="card-text">
+                </p>
+<!--Restaurant Middle Card: Provides extra visual weight and identifies the primary action in a set of buttons -->
+    <a id="secondCardBtn" target="_blank" rel="noopener noreferrer" href=""><button type="button" class="btn btn-light-blue btn-md">Search</button></a>
+              </div>
+            </div>
+<!-- End of Restaurant Middle Card -->
+  
+<!-- Start of Restaurant Right Card -->
+            <div class="card mb-4">
+<!--Start Restaurant Right Card image-->
+              <div class="view overlay">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
+                alt="Card image cap">
+                <a href="#!">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+<!--Start Restaurant Right Card content-->
+              <div class="card-body">
+<!--Start Restaurant Right Card Title-->
+                <h4 class="card-title">Good Choice</h4>
+<!--Start Restaurant Right Card Text-->
+                <p id="thirdCardText" class="card-text"></p>
+<!-- Restaurant Right Card: Provides extra visual weight and identifies the primary action in a set of buttons -->
+                <a id="thirdCardBtn" target="_blank" rel="noopener noreferrer" href="">
+                  <button type="button" class="btn btn-light-blue btn-md">Search</button>
+                </a> 
+              </div>
+            </div>
+<!-- End of Restaurant Right Card -->
+<!-- End of Restaurant Card Deck -->
+        </div>
+    </div>
+<!--End of Restaurant Container-->
+
+<!--Start of Hotel Container-->
+        <div class="col">
+          <div class="container">
+            <div class="row">
+              <div class="col text-center" id="hotels">
+                <div class="card">
+                <h1>Find Your Hotel</h1>
+                <img
+                  src="./Assets/hotel.png"
+                  alt="hotel icon"
+                  width="100"
+                  height="100"
+                  style="margin:auto"/>
+                <form>
+                  <input
+                    id="hotelSearch"
+                    type="text"
+                    placeholder="Search a City"
+                    aria-label="Search"
+                  />
+                  <button id="hotelbtn" class = "btn blue-gradient" type="button">
+                    Let's Stay!
+                  </button>
+                </form>
+              </div>
+            </div>
+            <br>
+<!-- Card deck Start from Mdbootstrap -->
+            <div class="card-deck" id = "hotelindex">
+              
+<!-- Card -->
+              <div class="card mb-4">
+            
+<!--Card image-->
+                <div class="view overlay">
+                  <img class="card-img-top"
+                  src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+                  alt="Card image cap"
+                  >
+                  <a href="#!">
+                    <div class="mask rgba-white-slight">
+                    </div>
+                  </a>
+                </div>
+            
+<!--Card content-->
+                      <div class="card-body">
+            
+<!--Title-->
+                          <h4 class="card-title">Our BEST Choice</h4>
+<!--Text-->
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                          content.
+                          </p>
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                       <button type="button" class="btn btn-light-blue btn-md">Read more
+                       </button>
+                      </div>
+                      </div>
+<!-- Card -->
+            
+ <!-- Card -->
+                      <div class="card mb-4">
+            
+<!--Card image-->
+                      <div class="view overlay">
+                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
+                          alt="Card image cap">
+                        <a href="#!">
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+            
+<!--Card content-->
+                      <div class="card-body">
+            
+<!--Title-->
+                      <h4 class="card-title">Our Great Choice</h4>
+<!--Text-->
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                      content.
+                      </p>
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                      <button type="button" class="btn btn-light-blue btn-md">Read more
+                      </button>
+            
+                    </div>
+                    </div>
+<!-- Card -->
+            
+<!-- Card -->
+              <div class="card mb-4">
+            
+<!--Card image-->
+                <div class="view overlay">
+                  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
+                    alt="Card image cap">
+                  <a href="#!">
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+            
+<!--Card content-->
+                <div class="card-body">
+            
+<!--Title-->
+                  <h4 class="card-title">Our Good Choice</h4>
+<!--Text-->
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                    content.</p>
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                  <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+            
+                </div>
+              </div>
+<!-- end of last Card -->
+              </div>
+<!-- end of Card deck from mdbootstrap -->
+              </div>
+              </div>
+              </div>    
+          </div>
+        </div>
+<!--End of Hotel Container-->
+
+
+
+
+<!--Start of Contact Container-->
+        <div class="col">
+          <div class="container">
+            <div class="row">
+              <div class="col text-center" id="contact">
+                <h1>Contact Us</h1>
+                <img
+                  src="./Assets/contact1.png"
+                  alt="flight icon"
+                  width="100"
+                  height="100"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+<!--End of Contact Container-->
+      </section>
+    </main>
+
+
+
+
+
+
+<!-- Footer -->
+    <footer class="page-footer font-small orange darken-3">
+<!-- Footer Elements -->
+      <div class="container">
+<!-- Grid row-->
+        <div class="row">
+<!-- Grid column -->
+          <div class="col-md-12 mb-1">
+            <div class="mb-5 flex-center">
+<!-- Facebook -->
+              <a class="fb-ic">
+                <i
+                  class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"
+                >
+                </i>
+              </a>
+<!-- Twitter -->
+              <a class="tw-ic">
+                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x">
+                </i>
+              </a>
+<!--Linkedin -->
+              <a class="li-ic">
+                <i
+                  class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"
+                >
+                </i>
+              </a>
+<!--Instagram-->
+              <a class="ins-ic">
+                <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x">
+                </i>
+              </a>
+<!--Pinterest-->
+              <a class="pin-ic">
+                <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+              </a>
+            </div>
+          </div>
+<!-- Grid column -->
+        </div>
+<!-- Grid row-->
+      </div>
+<!-- Footer Elements -->
+
+
+
+<!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        © 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+      </div>
+<!-- Copyright -->
+    </footer>
+<!-- Footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+<!-- Bootstrap tooltips -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+<!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
+    ></script>
+<!-- MDB core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
+    ></script>
+  </body>
+</html>
