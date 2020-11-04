@@ -1,4 +1,13 @@
 $(document).ready(function () {
+  let allHotelImages = {};
+  const slideContainer = $("#slideContainer");
+  //Restaurant Cards Local Storage
+  let eatLocalStorage = localStorage.getItem("eatLocalZip");
+  if (eatLocalStorage) {
+    getCardInfo(eatLocalStorage);
+  }
+  //End Restaurant Cards Local Storage
+
   //city variable and input box
   $("#hotelbtn").on("click", function () {
     $("#hotelindex").html("");
@@ -40,9 +49,9 @@ $(document).ready(function () {
 
         $.ajax(settings).done(function (imgresponse) {
           console.log(imgresponse);
-
+          allHotelImages[imgresponse.hotelId] = imgresponse.hotelImages;
           let img = imgresponse.hotelImages[0].baseUrl.replace("{size}", "z");
-          var rndmTxt = "This is some random text";
+          var rndmTxt = " ";
           var contentCard = $("<div>");
           contentCard.html(
             `<div class="card mb-4">
@@ -62,7 +71,9 @@ $(document).ready(function () {
             
             <p class="card-text">${rndmTxt}</p>
            
-            <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+            <button type="button" class="modal-btn btn btn-primary" data-toggle="modal" data-hotel="${imgresponse.hotelId}" data-target="#basicExampleModal">
+            Click here for hotel photos
+          </button>
       
           </div>
         </div>
@@ -74,7 +85,7 @@ $(document).ready(function () {
 
         //HOTEL ROOM IMAGES
 
-        //let sampleImg = imgresponse.hotelimages[i].baseUrl.replace("{size}", "b")
+        //let sampleImg = imgresponse.hotelimages[i].baseUrl.replace("{size}", "z")
 
         //var hotelCard = $("<div>").addClass("card");
 
@@ -91,6 +102,38 @@ $(document).ready(function () {
       }
     });
   });
+
+  $(document).on("click", ".modal-btn", function () {
+    buildCarousel($(this).data("hotel"));
+  });
+
+  function buildCarousel(hotelId) {
+    document.getElementById("carousel-indicators").innerHTML = "";
+    slideContainer.empty("");
+    var hotelImages = allHotelImages[hotelId];
+    if (hotelImages.length > 20) {
+      hotelImages = hotelImages.slice(0, 20);
+    }
+    for (let i = 0; i < hotelImages.length; i++) {
+      let img = hotelImages[i].baseUrl.replace("{size}", "z");
+
+      if (i === 0) {
+        var carouselCard = `<div class="carousel-item active">
+      <img class="d-block w-100" src="${img}" alt="First slide">
+      </div>`;
+      } else {
+        var carouselCard = `<div class="carousel-item">
+        <img class="d-block w-100" src="${img}" alt="First slide">
+        </div>`;
+      }
+      $(".carousel-indicators").append(`<li
+        data-target="#carousel-example-${i + 1}z"
+        data-slide-to="${i + 1}"
+        ></li>`);
+
+      slideContainer.append(carouselCard);
+    }
+  }
 
   // <div class="view overlay">
   //   <img
@@ -117,11 +160,16 @@ $(document).ready(function () {
   //   </div>
   // </div>;
 
-  //Restaurants
+  //Start Restaurants Section
   //zip code var and input box
   $("#eatBtn").on("click", function () {
     let zip = $("#eatLocation").val();
-    console.log(zip);
+    localStorage.setItem("eatLocalZip", zip);
+    getCardInfo(zip);
+  });
+  // Call API
+  function getCardInfo(zip) {
+    //US Restaurant Menus API Info
     var settings = {
       async: true,
       crossDomain: true,
@@ -134,68 +182,91 @@ $(document).ready(function () {
         "x-rapidapi-key": "3902862207mshcc87b50d739a8e1p19476ajsncf5356a4c9a7",
       },
     };
+    //AJAX request
     $.ajax(settings).done(function (response) {
-      console.log(response);
-      const restaurant = response.result.data[0];
-      let restaurantName = restaurant.restaurant_name;
-      let restaurantCuisine = restaurant.cuisines[0];
-      let restaurantAddress = restaurant.address.formatted;
-      let restaurantPhone = restaurant.restaurant_phone;
-      const restaurantWeb =
-        "https://www.google.com/search?" + restaurantPhone + restaurantAddress;
-      //card info
-      const template = `
-          <ul>
-          <ul>${restaurantName}</ul>
-          <ul>${restaurantCuisine}</ul>
-          <ul>${restaurantAddress}</ul>
-          <ul>${restaurantPhone}</ul>
+      //left card DOM
+      document.getElementById("bestCardText").textContent = "";
+      const restaurantBest = response.result.data[0];
+      let restaurantBestName = restaurantBest.restaurant_name;
+      let restaurantBestCuisine = restaurantBest.cuisines[0];
+      let restaurantBestAddress = restaurantBest.address.formatted;
+      let restaurantBestPhone = restaurantBest.restaurant_phone;
+      //Left card dynamic card title
+      document.querySelector(
+        ".card-titleBest"
+      ).textContent = restaurantBestName;
+      //leave page to Google Maps with dynamic restaurant info
+      const restaurantBestWeb =
+        "https://www.google.com/maps/search/" +
+        restaurantBestName +
+        " " +
+        restaurantBestAddress;
+      //Dynamic left card info
+      const templateBest = `
+        <ul>
+            <ul>Cuisine - ${restaurantBestCuisine}</ul>
+            <ul>Address - ${restaurantBestAddress}</ul>
+            <ul>Phone Number - ${restaurantBestPhone}</ul>
           </ul>`;
 
-      $("#firstCardText").append(template);
-      $("#secondCardBtn").attr("href", restaurantWeb);
+      $("#bestCardText").prepend(templateBest);
+      $("#bestCardBtn").attr("href", restaurantBestWeb);
 
+      //Middle card DOM
+      document.getElementById("greatCardText").textContent = "";
       const restaurantGreat = response.result.data[1];
       let restaurantGreatName = restaurantGreat.restaurant_name;
       let restaurantGreatCuisine = restaurantGreat.cuisines[0];
       let restaurantGreatAddress = restaurantGreat.address.formatted;
       let restaurantGreatPhone = restaurantGreat.restaurant_phone;
-      const restaurantWebGreat =
-        "https://www.google.com/search?" +
-        restaurantGreatPhone +
+      //Middle card dynamic card title
+      document.querySelector(
+        ".card-titleGreat"
+      ).textContent = restaurantGreatName;
+      //leave page to Google Maps with dynamic restaurant info
+      const restaurantGreatWeb =
+        "https://www.google.com/maps/search/" +
+        restaurantGreatName +
+        " " +
         restaurantGreatAddress;
-      //card info
+      //Dynamic middle card info
       const templateGreat = `
           <ul>
-          <ul>${restaurantGreatName}</ul>
-          <ul>${restaurantGreatCuisine}</ul>
-          <ul>${restaurantGreatAddress}</ul>
-          <ul>${restaurantGreatPhone}</ul>
+            <ul>Cuisine - ${restaurantGreatCuisine}</ul>
+            <ul>Address - ${restaurantGreatAddress}</ul>
+            <ul>Phone Number - ${restaurantGreatPhone}</ul>
           </ul>`;
 
-      $("#secondCardText").append(templateGreat);
-      $("#secondCardBtn").attr("href", restaurantWebGreat);
+      $("#greatCardText").prepend(templateGreat);
+      $("#greatCardBtn").attr("href", restaurantGreatWeb);
 
+      //Right card DOM
+      document.getElementById("goodCardText").textContent = "";
       const restaurantGood = response.result.data[2];
       let restaurantGoodName = restaurantGood.restaurant_name;
       let restaurantGoodCuisine = restaurantGood.cuisines[0];
       let restaurantGoodAddress = restaurantGood.address.formatted;
       let restaurantGoodPhone = restaurantGood.restaurant_phone;
-      const restaurantWebGood =
-        "https://www.google.com/search?" +
-        restaurantGoodPhone +
+      //Right card dynamic card title
+      document.querySelector(
+        ".card-titleGood"
+      ).textContent = restaurantGoodName;
+      //leave page to Google Maps with dynamic restaurant info
+      const restaurantGoodWeb =
+        "https://www.google.com/maps/search/" +
+        restaurantGoodName +
+        " " +
         restaurantGoodAddress;
-      //card info
+      //Dynamic Right card info
       const templateGood = `
           <ul>
-          <ul>${restaurantGoodName}</ul>
-          <ul>${restaurantGoodCuisine}</ul>
-          <ul>${restaurantGoodAddress}</ul>
-          <ul>${restaurantGoodPhone}</ul>
+            <ul>Cuisine - ${restaurantGoodCuisine}</ul>
+            <ul>Address - ${restaurantGoodAddress}</ul>
+            <ul>Phone Number - ${restaurantGoodPhone}</ul>
           </ul>`;
 
-      $("#thirdCardText").append(templateGood);
-      $("#thirdCardBtn").attr("href", restaurantWebGood);
+      $("#goodCardText").prepend(templateGood);
+      $("#goodCardBtn").attr("href", restaurantGoodWeb);
     });
-  });
+  }
 });
