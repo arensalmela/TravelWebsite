@@ -1,10 +1,7 @@
 # TravelWebsite
 
-Deployed Website Link ->
-
-Used the following site for verification.
--> https://validator.w3.org/nu/
-
+​Deployed Website Link -> **\*\***\*\***\*\***\*\*\***\*\***\*\***\*\***
+​
 ![code refactor demo](./Assets/SCREENSHOT.png)
 ![code refactor demo](./Assets/SCREENSHOT.png)
 ![code refactor demo](./Assets/SCREENSHOT.png)

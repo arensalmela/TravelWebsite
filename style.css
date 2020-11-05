@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Itim", cursive;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  background-color: #cccccc;
+}
+
+.card-deck {
+  margin-top: 18px;
+  flex-flow: row;
+}
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+.card-body {
+  text-align: center;
+}
+
+.mb-1,
+.footer-copyright,
+.page-footer {
+  background-color: #2e3951;
+}
+.jumbotron {
+  height: 100vh;
+  padding-top: 15%;
+}
+
+.fb-ic-i:hover {
+  font-size: 35px;
+  transition: all 0.3s ease-in-out;
+}
+
+.tw-ic-i:hover {
+  font-size: 35px;
+  transition: all 0.3s ease-in-out;
+}
+
+.li-ic-i:hover {
+  font-size: 35px;
+  transition: all 0.3s ease-in-out;
+}
+
+.ins-ic-i:hover {
+  font-size: 35px;
+  transition: all 0.3s ease-in-out;
+}
