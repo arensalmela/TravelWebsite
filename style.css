@@ -5,12 +5,7 @@
 }
 
 body {
-  background-image: url();
-  background-size: stretch;
   background-color: #cccccc;
-  background-position: center;
-  height: 500px;
-  background-repeat: no-repeat;
 }
 
 .card-deck {
