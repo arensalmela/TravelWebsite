@@ -122,8 +122,17 @@ $(document).ready(function () {
   }
 
   //Start Restaurants Section
-  //zip code var and input box
   $("#eatBtn").on("click", function () {
+    let enteredZip = $("#eatLocation").val();
+    let zipNum = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    if (enteredZip !== zipNum) {
+      $("#eatLocation").attr("placeholder", "Enter Five Numbers");
+    }
+    let placeholder = $("#eatLocation").attr("placeholder");
+    if ((placeholder = "Enter Five Numbers")) {
+      console.log(placeholder);
+      $("#eatLocation").val("");
+    }
     let zip = $("#eatLocation").val();
     localStorage.setItem("eatLocalZip", zip);
     getCardInfo(zip);
