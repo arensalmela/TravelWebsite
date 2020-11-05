@@ -53,6 +53,7 @@ $(document).ready(function () {
           let img = imgresponse.hotelImages[0].baseUrl.replace("{size}", "z");
           var rndmTxt = " ";
           var contentCard = $("<div>");
+          //Dynamically adding html elements including hotel image and name.
           contentCard.html(
             `<div class="card mb-4">
           <div class="view overlay">
@@ -67,7 +68,7 @@ $(document).ready(function () {
           <div class="card-body">
       
             
-            <h4 class="card-title">${hotelName}</h4>
+            <h6 class="card-title">${hotelName}</h6>
             
             <p class="card-text">${rndmTxt}</p>
            
@@ -82,23 +83,6 @@ $(document).ready(function () {
 
           $("#hotelindex").append(contentCard);
         });
-
-        //HOTEL ROOM IMAGES
-
-        //let sampleImg = imgresponse.hotelimages[i].baseUrl.replace("{size}", "z")
-
-        //var hotelCard = $("<div>").addClass("card");
-
-        //var hotelCardBody = $("<div>").addClass("card-body");
-
-        //var hotelIndex = $("<p>")
-        //.addClass("card-text")
-        //.html(hotelGroup.entities[i].caption);
-        //console.log(hotelGroup.entities[i].caption);
-
-        //hotelCardBody.append(hotelIndex);
-        //hotelCard.append(hotelCardBody);
-        //$("#hotelindex").append(hotelCard);
       }
     });
   });
@@ -108,15 +92,17 @@ $(document).ready(function () {
   });
 
   function buildCarousel(hotelId) {
+    //Setting carousel indicators to be empty each time it is clicked.
     document.getElementById("carousel-indicators").innerHTML = "";
     slideContainer.empty("");
     var hotelImages = allHotelImages[hotelId];
     if (hotelImages.length > 20) {
       hotelImages = hotelImages.slice(0, 20);
     }
+    //Editing each hotel img URL to indicate image size
     for (let i = 0; i < hotelImages.length; i++) {
       let img = hotelImages[i].baseUrl.replace("{size}", "z");
-
+      //Img at index 0 will load first
       if (i === 0) {
         var carouselCard = `<div class="carousel-item active">
       <img class="d-block w-100" src="${img}" alt="First slide">
@@ -134,31 +120,6 @@ $(document).ready(function () {
       slideContainer.append(carouselCard);
     }
   }
-
-  // <div class="view overlay">
-  //   <img
-  //     class="card-img-top"
-  //     src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
-  //     alt="Card image cap"
-  //   >
-  //     <a href="#!">
-  //       <div class="mask rgba-white-slight"></div>
-  //     </a>
-  //   </div>
-
-  //   <div class="card-body">
-  //     <h4 class="card-title">Card title</h4>
-
-  //     <p class="card-text">
-  //       Some quick example text to build on the card title and make up the bulk
-  //       of the card's content.
-  //     </p>
-
-  //     <button type="button" class="btn btn-light-blue btn-md">
-  //       Read more
-  //     </button>
-  //   </div>
-  // </div>;
 
   //Start Restaurants Section
   //zip code var and input box

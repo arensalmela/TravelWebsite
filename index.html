@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&family=Montserrat+Alternates:wght@300&family=Space+Grotesk&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="./Assets/favicon123.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Font Awesome -->
@@ -24,15 +30,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Travel and Dine With Us!</title>
-    <link rel="shortcut icon" type="image/png" href="./Assets/favicon1.png" />
+    <title>Stay Yummy</title>
   </head>
   <body>
     <!--Navbar -->
     <nav
-      class="mb-1 navbar navbar-expand-lg navbar-dark purple lighten-1 scrolling-navbar navbar fixed-top"
+      class="mb-1 navbar navbar-expand-lg navbar-dark lighten-1 scrolling-navbar navbar fixed-top"
     >
-      <a class="navbar-brand" href="#">Yummy</a>
+      <a class="navbar-brand" href="#">Stay Yummy</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -53,7 +58,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#restaurants">Restaurants</a>
+            <a class="nav-link" href="#restaurantsNav">Restaurants</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#hotels">Hotels</a>
@@ -63,7 +68,7 @@
           <li class="nav-item avatar">
             <a class="nav-link p-0" href="#">
               <img
-                src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                src="./Assets/image.png"
                 class="rounded-circle z-depth-0"
                 alt="avatar image"
                 height="35"
@@ -103,10 +108,11 @@
 
       <section>
         <!--Start of Restaurant Container-->
-        <div class="container">
+        <div class="container" id="restaurantsNav">
           <div class="row">
-            <div class="col">
-              <div class="col text-center" id="restaurants">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-12">
+              <div class="text-center">
                 <div class="card">
                   <h1>Find Your Food!</h1>
                   <img
@@ -129,6 +135,7 @@
                   </form>
                 </div>
               </div>
+              <div class="col-lg-3"></div>
             </div>
           </div>
           <br />
@@ -375,7 +382,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Hotel Images</h5>
                 <button
                   type="button"
                   class="close"
@@ -463,9 +470,6 @@
                 >
                   Close
                 </button>
-                <button type="button" class="btn btn-primary">
-                  Save changes
-                </button>
               </div>
             </div>
           </div>
@@ -475,7 +479,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="page-footer font-small orange darken-3">
+    <footer class="page-footer font-small darken-3">
       <!-- Footer Elements -->
       <div class="container">
         <!-- Grid row-->
@@ -486,25 +490,35 @@
               <!-- Facebook -->
               <a class="fb-ic">
                 <i
-                  class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"
+                  class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x fb-ic-i"
                 >
                 </i>
               </a>
               <!-- Twitter -->
               <a class="tw-ic">
-                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x">
+                <i
+                  class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x tw-ic-i"
+                >
                 </i>
               </a>
               <!--Linkedin -->
-              <a class="li-ic">
+              <a
+                class="li-ic"
+                href="https://www.linkedin.com/in/junkoyamazaki/"
+              >
                 <i
-                  class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"
+                  class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x li-ic-i"
                 >
                 </i>
               </a>
               <!--Instagram-->
-              <a class="ins-ic">
-                <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x">
+              <a
+                class="ins-ic"
+                href="https://www.instagram.com/junkooyamazaki/"
+              >
+                <i
+                  class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x ins-ic-i"
+                >
                 </i>
               </a>
             </div>
@@ -517,8 +531,8 @@
 
       <!-- Copyright -->
       <div class="footer-copyright text-center py-3">
-        © 2020 Copyright:
-        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+        <h2>Stay Yummy</h2>
+        © 2020 Copyright
       </div>
       <!-- Copyright -->
     </footer>
