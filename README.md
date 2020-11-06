@@ -1,14 +1,12 @@
 # TravelWebsite
 
 ​Deployed Website Link -> https://arensalmela.github.io/TravelWebsite/
+
+## Collaboration between https://github.com/arensalmela, https://github.com/CMDow, https://github.com/Jknox031, https://github.com/ReindeerCode, and https://github.com/junkoyama
+
 ​
-![code refactor demo](./Assets/banner.png)
-![code refactor demo](./Assets/eatSearch.png)
-![code refactor demo](./Assets/hotels1.png)
-![code refactor demo](./Assets/hotels2.png)
-![code refactor demo](./Assets/hotels3.png)
-![code refactor demo](./Assets/dynamic1.png)
-![code refactor demo](./Assets/dynamic2.png)
+
+## See images below
 
 ## Task
 
@@ -68,3 +66,11 @@ THEN I am able to easily get directions or see photos of the option
   - Repository best practices followed
 - Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application)
   - ReadMe complete
+
+![code refactor demo](./Assets/banner.png)
+![code refactor demo](./Assets/eatSearch.png)
+![code refactor demo](./Assets/hotels1.png)
+![code refactor demo](./Assets/hotels2.png)
+![code refactor demo](./Assets/hotels3.png)
+![code refactor demo](./Assets/dynamic1.png)
+![code refactor demo](./Assets/dynamic2.png)
