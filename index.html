@@ -84,7 +84,7 @@
     <main>
       <div class="jumbotron text-center">
         <br />
-        <h1 class="display-4">Welcome, Eatery Explorer.</h1>
+        <h1 class="display-4">Are you Staying Yummy?</h1>
         <p class="lead">
           If food and travel are your passions then you've landed in the right
           place.
@@ -102,7 +102,18 @@
         </p>
         <p>Now, let's get started.</p>
         <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button"> Let's Go</a>
+          <a
+            role="button"
+            href="#restaurantsNav"
+            class="btn blue-gradient startRestaurant"
+          >
+            Start My Restaurant Search
+            <i class="fas fas fa-pizza-slice pl-1"> </i>
+          </a>
+          <a class="btn blue-gradient startHotel" href="#hotels" role="button">
+            Start My Hotel Search
+            <i class="fas fa-concierge-bell"></i>
+          </a>
         </p>
       </div>
 
@@ -114,7 +125,7 @@
             <div class="col-lg-12">
               <div class="text-center">
                 <div class="card">
-                  <h1>Find Your Food!</h1>
+                  <h1>Find Your Food</h1>
                   <img
                     src="./Assets/restaurant.png"
                     alt="Restaurant Icon"
@@ -129,18 +140,18 @@
                       placeholder="Enter Zip Here"
                       aria-label="Search"
                     />
+                    <div id="eatErrMsg"></div>
                     <button id="eatBtn" class="btn blue-gradient" type="button">
                       Let's Eat!
                     </button>
                   </form>
                 </div>
               </div>
-              <div class="col-lg-3"></div>
             </div>
           </div>
           <br />
           <!-- Start Restaurant Card deck -->
-          <div class="card-deck">
+          <div class="card-deck" id="eatIndex">
             <!-- Start Restaurant Left Card -->
             <div class="card mb-4 eatContainer">
               <!--Start Restaurant Left Card image-->
@@ -159,12 +170,12 @@
               <!--Start Restaurant Left Card content-->
               <div class="card-body">
                 <!--Restaurant Left Card Title-->
-                <h4 class="card-titleBest"></h4>
+                <h4 class="card-titleBest-1"></h4>
                 <!--Restaurant Left Card Text-->
-                <p id="bestCardText" class="card-text"></p>
+                <p id="bestCardText-1" class="card-text"></p>
                 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
                 <a
-                  id="bestCardBtn"
+                  id="bestCardBtn-1"
                   target="_blank"
                   rel="noopener noreferrer"
                   href=""
@@ -191,12 +202,12 @@
               <!--Start Restaurant Middle Card content-->
               <div class="card-body">
                 <!--Start Restaurant Middle Card Title-->
-                <h4 class="card-titleGreat"></h4>
+                <h4 class="card-titleBest-3"></h4>
                 <!--Start Restaurant Middle Card Text-->
-                <p id="greatCardText" class="card-text"></p>
+                <p id="bestCardText-3" class="card-text"></p>
                 <!--Restaurant Middle Card: Provides extra visual weight and identifies the primary action in a set of buttons -->
                 <a
-                  id="greatCardBtn"
+                  id="bestCardBtn-3"
                   target="_blank"
                   rel="noopener noreferrer"
                   href=""
@@ -224,12 +235,12 @@
               <!--Start Restaurant Right Card content-->
               <div class="card-body">
                 <!--Start Restaurant Right Card Title-->
-                <h4 class="card-titleGood"></h4>
+                <h4 class="card-titleBest-2"></h4>
                 <!--Start Restaurant Right Card Text-->
-                <p id="goodCardText" class="card-text"></p>
+                <p id="bestCardText-2" class="card-text"></p>
                 <!-- Restaurant Right Card: Provides extra visual weight and identifies the primary action in a set of buttons -->
                 <a
-                  id="goodCardBtn"
+                  id="bestCardBtn-2"
                   target="_blank"
                   rel="noopener noreferrer"
                   href=""
@@ -266,8 +277,21 @@
                     placeholder="Search a City"
                     aria-label="Search"
                   />
+                  <div id="errMsg"></div>
                   <button id="hotelbtn" class="btn blue-gradient" type="button">
                     Let's Stay!
+                  </button>
+                </form>
+                  </button>
+                </form>
+                  </button>
+                </form>
+                  </button>
+                </form>
+                  </button>
+                </form>
+                  </button>
+                </form>
                   </button>
                 </form>
               </div>
@@ -282,7 +306,7 @@
               <div class="view overlay">
                 <img
                   class="card-img-top"
-                  src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+                  src="https://mdbootstrap.com/img/Photos/Others/images/86.jpg"
                   alt="Card image cap"
                 />
                 <a href="#!">
@@ -314,7 +338,7 @@
               <div class="view overlay">
                 <img
                   class="card-img-top"
-                  src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
+                  src="https://unsplash.com/photos/CepDpEiALqM"
                   alt="Card image cap"
                 />
                 <a href="#!">
@@ -343,7 +367,9 @@
               <div class="view overlay">
                 <img
                   class="card-img-top"
-                  src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
+                  src="https://unsplash.com/photos/CepDpEiALqM"
+                  alt="Card image cap"
+                />
                   alt="Card image cap"
                 />
                 <a href="#!">
