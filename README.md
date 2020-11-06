@@ -1,12 +1,14 @@
 # TravelWebsite
 
-​Deployed Website Link -> **\*\***\*\***\*\***\*\*\***\*\***\*\***\*\***
+​Deployed Website Link -> https://arensalmela.github.io/TravelWebsite/
 ​
-![code refactor demo](./Assets/SCREENSHOT.png)
-![code refactor demo](./Assets/SCREENSHOT.png)
-![code refactor demo](./Assets/SCREENSHOT.png)
-![code refactor demo](./Assets/SCREENSHOT.png)
-![code refactor demo](./Assets/SCREENSHOT.png)
+![code refactor demo](./Assets/banner.png)
+![code refactor demo](./Assets/eatSearch.png)
+![code refactor demo](./Assets/hotels1.png)
+![code refactor demo](./Assets/hotels2.png)
+![code refactor demo](./Assets/hotels3.png)
+![code refactor demo](./Assets/dynamic1.png)
+![code refactor demo](./Assets/dynamic2.png)
 
 ## Task
 

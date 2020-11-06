@@ -137,25 +137,20 @@ $(document).ready(function () {
 
   //Start Restaurants Section
   $("#eatBtn").on("click", function () {
+    $("#eatErrMsg").html("");
     let enteredZip = $("#eatLocation").val();
-    // if (isValid(enteredZip)) {
-    // } else {
-    //   $("#eatErrMsg").append($("<p>Do not include special characters</p>"));
-    // }
+    if (isValid(enteredZip)) {
+    } else {
+      $("#eatErrMsg").append($("<p>Do not include special characters</p>"));
+      return;
+    }
 
-    // $("#eatIndex").html("");
-    // $("#eatErrMsg").html("");
+    if (!hasNumber(enteredZip)) {
+      $("#eatErrMsg").append($("<p>Do not include letters</p>"));
+      return;
+    } else {
+    }
 
-    // if (hasNumber(enteredZip)) {
-    //   $("#eatErrMsg").append($("<p>Do not include letters</p>"));
-    // } else {
-    //   console.log("valid");
-    // }
-
-    // if ((placeholder = "Enter Five Numbers")) {
-    //   console.log(placeholder);
-    //   $("#eatLocation").val("");
-    // }
     let zip = $("#eatLocation").val();
     localStorage.setItem("eatLocalZip", zip);
     getCardInfo(zip);
@@ -180,16 +175,12 @@ $(document).ready(function () {
       //left card DOM
 
       for (i = 0; i <= 2; i++) {
-        document.getElementById("bestCardText-" + (i + 1)).textContent = "";
+        let temp = document.getElementById("bestCardText-" + (i + 1));
         const restaurantBest = response.result.data[i];
-        // if (restaurantBest.restaurant_name) {
-        //   return;
-        // }
-        console.log(i);
-        let restaurantBestName = restaurantBest.restaurant_name;
-        let restaurantBestCuisine = restaurantBest.cuisines[i];
-        let restaurantBestAddress = restaurantBest.address.formatted;
-        let restaurantBestPhone = restaurantBest.restaurant_phone;
+        let restaurantBestName = restaurantBest?.restaurant_name;
+        let restaurantBestCuisine = restaurantBest?.cuisines[i];
+        let restaurantBestAddress = restaurantBest?.address.formatted;
+        let restaurantBestPhone = restaurantBest?.restaurant_phone;
         //Left card dynamic card title
         document.querySelector(
           ".card-titleBest-" + (i + 1)
