@@ -175,7 +175,7 @@ $(document).ready(function () {
       //left card DOM
 
       for (i = 0; i <= 2; i++) {
-        let temp = document.getElementById("bestCardText-" + (i + 1));
+        document.getElementById("bestCardText-" + (i + 1)).innerHTML = "";
         const restaurantBest = response.result.data[i];
         let restaurantBestName = restaurantBest?.restaurant_name;
         let restaurantBestCuisine = restaurantBest?.cuisines[i];
