@@ -17,11 +17,11 @@ $(document).ready(function () {
     if (isValid(hotelCityInput)) {
       console.log("valid");
     } else {
-      $("#errMsg").append($("<p>Do not include special characters</p>"));
+      $("#hotekErrMsg").append($("<p>Do not include special characters</p>"));
     }
 
     if (hasNumber(hotelCityInput)) {
-      $("#errMsg").append($("<p>Do not include numbers</p>"));
+      $("#hotelErrMsg").append($("<p>Do not include numbers</p>"));
     } else {
       console.log("valid");
     }
