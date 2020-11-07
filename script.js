@@ -27,6 +27,7 @@ $(document).ready(function () {
     }
 
     console.log(hotelCityInput);
+    //Passing API user input
     var settings = {
       async: true,
       crossDomain: true,
@@ -39,7 +40,7 @@ $(document).ready(function () {
         "x-rapidapi-key": "3902862207mshcc87b50d739a8e1p19476ajsncf5356a4c9a7",
       },
     };
-
+    //For loop to grab hotel group info (top hotels) located at index 3 of suggestions
     $.ajax(settings).done(function (response) {
       console.log(response);
       hotelGroup = response.suggestions[3];
@@ -47,6 +48,7 @@ $(document).ready(function () {
       for (i = 0; i < hotelGroup.entities.length; i++) {
         var hotel = hotelGroup.entities[i];
         let hotelName = hotel.name;
+        //Using destination ID to pass through photos API.
         var settings = {
           async: true,
           crossDomain: true,
@@ -60,7 +62,7 @@ $(document).ready(function () {
               "3902862207mshcc87b50d739a8e1p19476ajsncf5356a4c9a7",
           },
         };
-
+        //Hotel image at index 0 used for card of each hotel suggestion
         $.ajax(settings).done(function (imgresponse) {
           console.log(imgresponse);
           allHotelImages[imgresponse.hotelId] = imgresponse.hotelImages;
@@ -109,6 +111,7 @@ $(document).ready(function () {
     //Setting carousel indicators to be empty each time it is clicked.
     document.getElementById("carousel-indicators").innerHTML = "";
     slideContainer.empty("");
+    //Capping the number of hotel images populated by API to 20
     var hotelImages = allHotelImages[hotelId];
     if (hotelImages.length > 20) {
       hotelImages = hotelImages.slice(0, 20);
