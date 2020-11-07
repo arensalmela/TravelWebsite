@@ -67,10 +67,11 @@ THEN I am able to easily get directions or see photos of the option
 - Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application)
   - ReadMe complete
 
-![code refactor demo](./Assets/banner.png)
-![code refactor demo](./Assets/eatSearch.png)
-![code refactor demo](./Assets/hotels1.png)
-![code refactor demo](./Assets/hotels2.png)
-![code refactor demo](./Assets/hotels3.png)
-![code refactor demo](./Assets/dynamic1.png)
-![code refactor demo](./Assets/dynamic2.png)
+![Banner Image](./Assets/banner.png)
+![Restaurant Section](./Assets/eatSearch.png)
+![Hotels 1](./Assets/hotels1.png)
+![Hotels 2](./Assets/hotels2.png)
+![Hotels 3](./Assets/hotels3.png)
+![Dynamic 1](./Assets/dynamic1.png)
+![Dynamic 2](./Assets/dynamic2.png)
+![Website GIF](./Assets/screenRecord.gif)
