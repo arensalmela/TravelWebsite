@@ -11,13 +11,13 @@ $(document).ready(function () {
   //city variable and input box
   $("#hotelbtn").on("click", function () {
     $("#hotelindex").html("");
-    $("#errMsg").html("");
+    $("#hotelErrMsg").html("");
     let hotelCityInput = $("#hotelSearch").val();
     //If statement adding text to inform user of incorrect character usage
     if (isValid(hotelCityInput)) {
       console.log("valid");
     } else {
-      $("#hotekErrMsg").append($("<p>Do not include special characters</p>"));
+      $("#hotelErrMsg").append($("<p>Do not include special characters</p>"));
     }
 
     if (hasNumber(hotelCityInput)) {
